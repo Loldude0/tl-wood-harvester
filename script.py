@@ -102,10 +102,10 @@ def moveForwardShort():
     Controller().release('w')
 
 def moveForwardLong():
-    Controller().press(Key.shift_l)
+    #Controller().press(Key.shift_l)
     Controller().press('w')
     time.sleep(0.4)
-    Controller().release(Key.shift_l)
+    #Controller().release(Key.shift_l)
     Controller().release('w')
 
 def inventoryOpen():
