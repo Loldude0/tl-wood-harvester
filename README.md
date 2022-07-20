@@ -28,3 +28,6 @@ you need to use Tensorflow Serving with Docker, follow the official guide and in
 
 https://www.tensorflow.org/tfx/serving/docker
 
+### Common Steps
+
+after you have everything installed, start tradelands(join a nearly empty server), head to the wc woody area and then run the script, DO NOT GO TO ANOTHER TAB/WINDOW WHILE THE SCRIPT IS RUNNING
