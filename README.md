@@ -1,10 +1,10 @@
-### tl-wood-harvester
+# tl-wood-harvester
 
 harvests wood for you
 
 ## how to use(in simple terms)
 
-# With Tensorflow Serving on Linux
+### With Tensorflow Serving on Linux
 
 note - I recommend you to do this in a virtual machine
 
@@ -22,7 +22,7 @@ Step 5 - run this command to run them in different terminals for both of them, m
 
 Step 6 - run the script, make sure you change the url within them, getDistance is model2
 
-# Windows
+### Windows
 
 you need to use Tensorflow Serving with Docker, follow the official guide and in the end perform Step 6 as given above
 
