@@ -17,14 +17,14 @@ def takeScreenshot():
     image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
     image = image[465:615, 885:1035]
     cv2.imwrite("image.png", image)
-    image = tf.keras.utils.img_to_array(tf.keras.utils.load_img("C:\Projects\TL\scripts\image.png", target_size=(150, 150))) / 255.
+    image = tf.keras.utils.img_to_array(tf.keras.utils.load_img("directory of where its running + /image.png", target_size=(150, 150))) / 255.
     image = image.astype('float16')
     image = image[np.newaxis, :, :, :]
     return image
 
 def getPrediction(imageToPred):
     data = json.dumps({"signature_name": "serving_default", "instances": imageToPred.tolist()})
-    json_response = requests.post('http://172.18.189.216:9000/v1/models/tlCLassifier:predict', data=data, headers=headers)
+    json_response = requests.post('link to model 1', data=data, headers=headers)
     prediction = json.loads(json_response.text)['predictions']
     if prediction[0][0] > prediction[0][1] and prediction[0][0] > prediction[0][2]:
         return "none"
@@ -37,7 +37,7 @@ def getPrediction(imageToPred):
 
 def getDistance(imageToPred):
     data = json.dumps({"signature_name": "serving_default", "instances": imageToPred.tolist()})
-    json_response = requests.post('http://172.18.189.216:9001/v1/models/tlCLassifier2:predict', data=data, headers=headers)
+    json_response = requests.post('link to model 2', data=data, headers=headers)
     prediction = json.loads(json_response.text)['predictions']
     if prediction[0][0] > prediction[0][1] and prediction[0][0] > prediction[0][2]:
         return "close"
